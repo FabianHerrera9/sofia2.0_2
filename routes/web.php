@@ -14,6 +14,8 @@ use App\Http\Controllers\ProgramaController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () {return view('index');
+});
 
 Route::get('ficha',[FichaController::class,'index'])->name('ficha.index');
 Route::get('ficha/create',[FichaController::class,'create'])->name('ficha.create');

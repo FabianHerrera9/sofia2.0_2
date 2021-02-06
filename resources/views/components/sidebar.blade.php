@@ -4,12 +4,12 @@
     </button>   
     <ul class="nav flex-column collapse d-sm-block my-sm-5 " id="side">
         <li class="nav-item my-sm-3">
-            <a href="">
+            <a href="{{route('ficha.index')}}">
                 <i class="fas fa-award"></i>Fichas
             </a>
         </li>
         <li class="nav-item my-sm-3">
-            <a href="">
+            <a href="{{route('programa.index')}}">
                 <i class="fas fa-chalkboard"></i>Programas de formación
             </a>
         </li>
