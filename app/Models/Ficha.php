@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Ficha extends Model
 {
     use HasFactory;
+    protected $table='fichas';
+    protected $primaryKey='id';
+    protected $fillabel = [
+        'Jornada','estado'
+    ];
 }

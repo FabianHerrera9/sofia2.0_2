@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class PFormacion extends Model
 {
     use HasFactory;
+    protected $table = 'programasdeformacion';
+    protected $primaryKey = 'id';
+    protected $fillable = [
+        'PFormacion','SIGLA'
+    ];
 }
