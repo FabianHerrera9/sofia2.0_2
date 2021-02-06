@@ -15,6 +15,17 @@ class CreateAprendicesTable extends Migration
     {
         Schema::create('aprendices', function (Blueprint $table) {
             $table->id();
+            $table->string('Documento',75);
+            $table->string('Nombre',75);
+            $table->string('Apellidos',75);
+            $table->string('Correo',75);
+            $table->string('FechaNacimiento',75);
+            $table->string('Genero',75);
+            $table->string('TipoDocumento',75);
+
+            $table->bigInteger('idFicha')->unsigned();
+            $table->foreign('idFicha')->references('idFicha')->on('fichas');
+
             $table->timestamps();
         });
     }

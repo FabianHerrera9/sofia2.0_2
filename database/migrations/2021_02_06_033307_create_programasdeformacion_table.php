@@ -14,7 +14,10 @@ class CreateProgramasdeformacionTable extends Migration
     public function up()
     {
         Schema::create('programasdeformacion', function (Blueprint $table) {
-            $table->id();
+            $table->id('Codigo');
+            $table->string('PFormacion',75);
+            $table->string('SIGLA',75);
+
             $table->timestamps();
         });
     }
