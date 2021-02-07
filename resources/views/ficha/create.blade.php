@@ -31,7 +31,7 @@
                     <hr>
                     <button class="btn btn-success" type="submit">Agregar ficha</button>
                     <a type="button" class="btn" id="color-font" href="{{route('ficha.index')}}">Cancelar</a>
-                </form>
+                </form> 
             </div>
 
         </div>
