@@ -19,9 +19,9 @@ class CreateAprendicesTable extends Migration
             $table->string('Nombre',75);
             $table->string('Apellidos',75);
             $table->string('Correo',75);
-            $table->string('FechaNacimiento',75);
-            $table->string('Genero',75);
-            $table->string('TipoDocumento',75);
+            $table->dateTime('FechaNacimiento');
+            $table->enum('Genero',['Masculino','Femenino','No-Binario']);
+            $table->enum('TipoDocumento',['TI','CC','CE','PS']);
 
             $table->bigInteger('idFicha')->unsigned();
             $table->foreign('idFicha')->references('idFicha')->on('fichas');

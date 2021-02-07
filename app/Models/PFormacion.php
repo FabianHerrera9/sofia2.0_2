@@ -9,7 +9,7 @@ class PFormacion extends Model
 {
     use HasFactory;
     protected $table = 'programasdeformacion';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'Codigo';
     protected $fillable = [
         'PFormacion','SIGLA'
     ];

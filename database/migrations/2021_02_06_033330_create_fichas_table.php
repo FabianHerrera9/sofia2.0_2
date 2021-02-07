@@ -15,11 +15,11 @@ class CreateFichasTable extends Migration
     {
         Schema::create('fichas', function (Blueprint $table) {
             $table->id('idFicha');
-            $table->string('Jornada',75);
-            $table->string('estado',75);
+            $table->enum('Jornada',['Diurna','Mixta','Nocturna']);
+            $table->enum('estado',['Activo','Inactivo']);
 
+            //
             $table->bigInteger('idPformacion')->unsigned();
-
             $table->foreign('idPformacion')->references('Codigo')->on('programasdeformacion');
 
             $table->timestamps();

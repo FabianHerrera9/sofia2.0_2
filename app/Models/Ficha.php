@@ -9,8 +9,8 @@ class Ficha extends Model
 {
     use HasFactory;
     protected $table='fichas';
-    protected $primaryKey='id';
-    protected $fillabel = [
-        'Jornada','estado'
+    protected $primaryKey='idFicha';
+    protected $fillable = [
+        'Jornada','estado','idPformacion'
     ];
 }
