@@ -38,7 +38,7 @@
                                         <a href="{{route('ficha.edit',$ficha->idFicha)}}">
                                             <i class="far fa-edit"></i>
                                         </a>
-                                        <a href="{{route('ficha.dactivate',$ficha->idFicha)}}">
+                                        <a href="">
                                             <i class="fas fa-ban"></i>
                                         </a>
                                 </td>
