@@ -38,7 +38,7 @@
                                         <a href="{{route('ficha.edit',$ficha->idFicha)}}">
                                             <i class="far fa-edit"></i>
                                         </a>
-                                        <a href="">
+                                        <a href=" ">
                                             <i class="fas fa-ban"></i>
                                         </a>
                                 </td>
