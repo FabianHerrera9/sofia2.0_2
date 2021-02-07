@@ -28,8 +28,9 @@
 
                         <select name="Jornada" id="Jornada" class="form-select my-3" aria-label="Default select example" >
                             <option value="{{$ficha->Jornada}}">{{$ficha->Jornada}}</option>
-                            <option value="Mixta">Diurna</option>
-                            <option value="Diurna">Mixta</option>
+                            <option value="">------------------------</option>
+                            <option value="Diurna">Diurna</option>
+                            <option value="Mixta">Mixta</option>
                             <option value="Nocturna">Nocturna</option>
                         </select>
 

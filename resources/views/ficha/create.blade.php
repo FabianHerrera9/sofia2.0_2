@@ -11,8 +11,8 @@
                     @csrf
                     <select name="Jornada" id="Jornada" class="form-select my-3" aria-label="Default select example" >
                         <option>Seleccione Jornada</option>
-                        <option value="Mixta">Diurna</option>
-                        <option value="Diurna">Mixta</option>
+                        <option value="Diurna">Diurna</option>
+                        <option value="Mixta">Mixta</option>
                         <option value="Nocturna">Nocturna</option>
                     </select>
 
