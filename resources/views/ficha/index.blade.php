@@ -25,23 +25,23 @@
                     <tbody>
                         @foreach($fichas as $ficha)
                         <tr>
-                                <td>{{$ficha->idFicha}}</td>
-                                <td>{{$ficha->Jornada}}</td>
-                                <td>{{$ficha->estado}}</td>
-                                @foreach($programa as $pformacion)
-                                    @if($ficha->idPformacion == $pformacion->Codigo)
-                                        <td>{{$pformacion->PFormacion}}</td>
-                                    @endif
-                                @endforeach
-                                <td>
-                                        @csrf
-                                        <a href="{{route('ficha.edit',$ficha->idFicha)}}">
-                                            <i class="far fa-edit"></i>
-                                        </a>
-                                        <a href=" ">
-                                            <i class="fas fa-ban"></i>
-                                        </a>
-                                </td>
+                            <td>{{$ficha->idFicha}}</td>
+                            <td>{{$ficha->Jornada}}</td>
+                            <td>{{$ficha->estado}}</td>
+                            @foreach($programa as $pformacion)
+                                @if($ficha->idPformacion == $pformacion->Codigo)
+                                    <td>{{$pformacion->PFormacion}}</td>
+                                @endif
+                            @endforeach
+                            <td>
+                                @csrf
+                                <a href="{{route('ficha.edit',$ficha->idFicha)}}">
+                                    <i class="far fa-edit"></i>
+                                </a>
+                                <a href=" ">
+                                    <i class="fas fa-ban"></i>
+                                </a>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>

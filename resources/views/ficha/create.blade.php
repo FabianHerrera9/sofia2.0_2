@@ -1,6 +1,6 @@
 @extends('template.layout')
 @section('title')
-    Fichas
+    Agregar Ficha
 @endsection
 @section('content')
 <div class="container">
@@ -15,13 +15,11 @@
                         <option value="Mixta">Mixta</option>
                         <option value="Nocturna">Nocturna</option>
                     </select>
-
                     <select name="estado" id="estado" class="form-select my-3" aria-label="Default select example" >
                         <option>Seleccione estado de la ficha</option>
                         <option value="Activo">Activo</option>
                         <option value="Inactivo">Inactivo</option>
                     </select>
-
                     <select name="idPformacion" id="idPformacion" class="form-select" aria-label="Default select example">
                         <option value="">Seleccione Programa de Formacion</option>
                             @foreach($programa as $pformacion)

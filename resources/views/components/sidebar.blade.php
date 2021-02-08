@@ -14,12 +14,12 @@
             </a>
         </li>
         <li class="nav-item my-sm-3">
-            <a href="">
+            <a href="{{route('aprendiz.index')}}">
                 <i class="fas fa-user-graduate"></i>Aprendices
             </a> 
         </li>
         <li class="nav-item my-sm-3">
-            <a href="">
+            <a href="{{route('instructor.index')}}">
                 <i class="fas fa-chalkboard-teacher"></i>Instructores
             </a> 
         </li>
