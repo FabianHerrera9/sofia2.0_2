@@ -28,6 +28,9 @@
         #color-font{
             color: red;
         }
+        .uppercase{
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
@@ -36,7 +39,7 @@
         <div class="row">
             {{-- Traemos el componente Sidebar --}}
             @include('components.sidebar')
-            {{-- Este es el cuerpo para trabajar todas las vistos, lo que cambiara en cada una --}}
+            {{-- Este es el cuerpo para trabajar todas las vistas, lo que cambiara en cada una --}}
             <div class="offset-3 offset-xl-2 col-xl-10 col-9 mt-5">
                 @yield('content')
             </div>          

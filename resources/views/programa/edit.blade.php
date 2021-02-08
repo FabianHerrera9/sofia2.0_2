@@ -15,7 +15,7 @@
                             <label for="PFormacion">{{$programa->PFormacion}}</label>
                         </div>
                         <div class="form-floating">
-                            <input type="text" class="form-control " id="SIGLA" name="SIGLA" placeholder="Siglas" >
+                            <input type="text" class="form-control uppercase" id="SIGLA" name="SIGLA" placeholder="Siglas" >
                             <label for="SIGLA">{{$programa->SIGLA}}</label>
                         </div>
                         <hr>

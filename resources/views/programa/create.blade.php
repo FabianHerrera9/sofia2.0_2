@@ -14,7 +14,7 @@
                             <label for="Programa">Nombre del programa de formación</label>
                         </div>
                         <div class="form-floating">
-                            <input type="text" class="form-control " id="SIGLA" name="SIGLA" placeholder="Siglas" >
+                            <input type="text" class="form-control uppercase" id="SIGLA" name="SIGLA" placeholder="Siglas" >
                             <label for="Siglas">Siglas</label>
                         </div>
                         <hr>

@@ -4,11 +4,6 @@
 @endsection
 
 @section('content')
-    <style type="text/css">
-        .uppercase{
-            text-transform: uppercase;
-        }
-    </style>
     <div class="container">
         <div class="row">
             <div class="card offset-md-2 col-md-8">
