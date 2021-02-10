@@ -36,10 +36,10 @@
                             <td>{{$aprendices->Genero}}</td>
 
                             @foreach($ficha as $fichas)
-                                @if($aprendices->idFicha == $fichas->idFicha)
-                                    <td>{{$fichas->idFicha}}</td>
-                                @elseif($aprendices->idFicha != $fichas->idFicha)
+                                @if($aprendices->idFicha != $fichas->idFicha)
                                     <td>Sin asignar Ficha</td>
+                                @else
+                                        <td>{{$fichas->idFicha}}</td>
                                 @endif
                             @endforeach
                             <td>

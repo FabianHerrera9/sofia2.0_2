@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PFormacion;
 use Illuminate\Http\Request;
 use App\Models\Instructor;
 use App\Models\FIcha;
@@ -15,7 +16,8 @@ class InstructorController extends Controller
     }
     public function create() {
         $ficha = Ficha::all();
-        return view('instructor.create',compact('ficha'));
+        $programa=PFormacion::all();
+        return view('instructor.create',compact('ficha','programa'));
     }
     public function store(Request $request ) {
         $instructor=Instructor::create($request->all());

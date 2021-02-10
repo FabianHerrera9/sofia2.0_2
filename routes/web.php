@@ -17,7 +17,7 @@ use App\Http\Controllers\InstructorController;
 |
 */
 //index
-Route::get('/', function () {return view('index.index');
+Route::get('/', function () {return view('index');
 });
 
 //Fichas

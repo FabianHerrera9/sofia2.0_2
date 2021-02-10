@@ -28,7 +28,11 @@
                         <select name="idFicha" id="idFicha" class="form-select" aria-label="select" required>
                             <option value="">Seleccione la Ficha</option>
                                 @foreach($ficha as $fichas)
-                                    <option value="{{$fichas->idFicha}}">{{$fichas->Jornada}}</option>
+                                    @foreach($programa as $pformacion)
+                                        @if($fichas->idFicha == $pformacion->Codigo)
+                                            <option value="{{$fichas->idFicha}}">{{$fichas->idFicha}} | {{$pformacion->PFormacion}}</option>
+                                        @endif
+                                    @endforeach
                                 @endforeach
                         </select>
                         <hr>

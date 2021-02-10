@@ -11,11 +11,11 @@
                         @csrf
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="PFormacion" name="PFormacion" placeholder="Programa">
-                            <label for="Programa">Nombre del programa de formación</label>
+                            <label for="PFormacion">Nombre del programa de formación</label>
                         </div>
                         <div class="form-floating">
                             <input type="text" class="form-control uppercase" id="SIGLA" name="SIGLA" placeholder="Siglas" >
-                            <label for="Siglas">Siglas</label>
+                            <label for="SIGLA">Siglas</label>
                         </div>
                         <hr>
                         <button type="submit" class="btn btn-success">Agregar Programa de Formacion</button>
