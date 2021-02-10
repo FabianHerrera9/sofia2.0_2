@@ -45,11 +45,15 @@
                         <select name="idFicha" id="idFicha" class="form-select" aria-label="select">
                             <option value="">Seleccione la Ficha</option>
                                 @foreach($ficha as $fichas)
-                                    <option value="{{$fichas->idFicha}}">{{$fichas->Jornada}}</option>
+                                    @foreach($programa as $pformacion)
+                                        @if($fichas->idFicha == $pformacion->Codigo)
+                                        <option value="{{$fichas->idFicha}}"> {{$fichas->idFicha}}|{{$pformacion->PFormacion}}</option>
+                                        @endif
+                                    @endforeach
                                 @endforeach
                         </select>
                         <hr>
-                        <button type="submit" class="btn btn-success">Agregar instructor</button>
+                        <button type="submit" class="btn btn-success">Agregar Aprendiz</button>
                         <a type="button" class="btn" id="color-font" href="{{route('instructor.index')}}">Cancelar</a>
                     </form>
                 </div>

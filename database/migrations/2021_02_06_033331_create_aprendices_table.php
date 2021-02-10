@@ -23,7 +23,7 @@ class CreateAprendicesTable extends Migration
             $table->enum('Genero',['Masculino','Femenino','No-Binario']);
             $table->enum('TipoDocumento',['TI','CC','CE','PS']);
 
-            $table->bigInteger('idFicha')->unsigned();
+            $table->bigInteger('idFicha')->unsigned()->nullable();
             $table->foreign('idFicha')->references('idFicha')->on('fichas');
 
             $table->timestamps();

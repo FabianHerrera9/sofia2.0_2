@@ -12,7 +12,7 @@
             </div>
             <div class="card-body">
                 <table class="table  table-hover">
-                    <caption>Lista de instructores</caption>
+                    <caption>Listado de Aprendices SENA</caption>
                     <thead>
                         <tr class="table-dark">
                             <th>Nombres</th>
@@ -30,13 +30,16 @@
                         <tr>
                             <td>{{$aprendices->Nombre}}</td>
                             <td>{{$aprendices->Apellidos}}</td>
-                            <td>{{$aprendices->Correo}}</td> 
+                            <td>{{$aprendices->Correo}}</td>
                             <td>{{$aprendices->FechaNacimiento}}</td>
                             <td>{{$aprendices->TipoDocumento}} {{$aprendices->Documento}}</td>
-                            <td>{{$aprendices->Genero}}</td> 
+                            <td>{{$aprendices->Genero}}</td>
+
                             @foreach($ficha as $fichas)
                                 @if($aprendices->idFicha == $fichas->idFicha)
                                     <td>{{$fichas->idFicha}}</td>
+                                @elseif($aprendices->idFicha != $fichas->idFicha)
+                                    <td>Sin asignar Ficha</td>
                                 @endif
                             @endforeach
                             <td>

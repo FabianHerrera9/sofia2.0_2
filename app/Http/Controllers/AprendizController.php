@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PFormacion;
 use Illuminate\Http\Request;
 use App\Models\Aprendiz;
 use App\Models\FIcha;
@@ -11,11 +12,13 @@ class AprendizController extends Controller
     public function index() {
         $aprendiz = Aprendiz::all();
         $ficha = Ficha::all();
-        return view('aprendiz.index',compact('aprendiz','ficha'));
+        $programa=PFormacion::all();
+        return view('aprendiz.index',compact('aprendiz','ficha','programa'));
     }
     public function create() {
         $ficha = Ficha::all();
-        return view('aprendiz.create',compact('ficha'));
+        $programa = PFormacion::all();
+        return view('aprendiz.create',compact('ficha','programa'));
     }
     public function store(Request $request ) {
         $aprendiz=Aprendiz::create($request->all());

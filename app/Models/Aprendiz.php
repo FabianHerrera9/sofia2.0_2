@@ -11,6 +11,6 @@ class Aprendiz extends Model
     protected $table='aprendices';
     protected $primaryKey='idAprendiz';
     protected $fillable = [
-        'Documento','Nombre','Apellidos','Correo','FechaNacimiento','Genero','TipoDocumento'
+        'Documento','Nombre','Apellidos','Correo','FechaNacimiento','Genero','TipoDocumento','idFicha'
     ];
 }
