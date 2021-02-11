@@ -7,11 +7,10 @@
         <div class="row">
             <div class="card offset-md-3 col-md-6">
                 <div class="card-body">
-                    <form action="{{route('instructor.store')}}" method="post">
+                    <form action="{{route('instructor.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="Foto" name="Foto" placeholder="Foto" >
-                            <label for="Foto">Aqui iria la foto De momento para que no se nos olvide</label>
+                            <input type="file"  id="Foto" name="Foto" accept="image/*" >
                         </div>
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="Nombres" name="Nombres" placeholder="instructor">
