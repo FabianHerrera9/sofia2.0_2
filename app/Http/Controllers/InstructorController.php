@@ -21,6 +21,11 @@ class InstructorController extends Controller
     }
     public function store(Request $request ) {
         $instructor=Instructor::create($request->all());
+        $request->validate([
+
+            'file'=>'required|image'
+
+        ]);
         return redirect()->route('instructor.index');
     }
     public function edit($id){
