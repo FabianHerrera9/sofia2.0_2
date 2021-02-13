@@ -11,41 +11,43 @@
                 <a href="{{route('ficha.create')}}" class="btn btn-success">Registro Ficha</a>
             </div>
             <div class="card-body">
-                <table class="table  table-hover">
-                    <caption>Lista de fichas</caption>
-                    <thead>
-                        <tr class="table-dark">
-                            <th>Ficha</th>
-                            <th>Jornada</th>
-                            <th>Estado</th>
-                            <th>Programa de formación</th>
-                            <th>Opciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($fichas as $ficha)
-                        <tr>
-                            <td>{{$ficha->idFicha}}</td>
-                            <td>{{$ficha->Jornada}}</td>
-                            <td>{{$ficha->estado}}</td>
-                            @foreach($programa as $pformacion)
-                                @if($ficha->idPformacion == $pformacion->Codigo)
-                                    <td>{{$pformacion->PFormacion}}</td>
-                                @endif
+                <div class="table-responsive">
+                    <table class="table  table-hover">
+                        <caption>Lista de fichas</caption>
+                        <thead>
+                            <tr class="table-dark">
+                                <th>Ficha</th>
+                                <th>Jornada</th>
+                                <th>Estado</th>
+                                <th>Programa de formación</th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($fichas as $ficha)
+                            <tr>
+                                <td>{{$ficha->idFicha}}</td>
+                                <td>{{$ficha->Jornada}}</td>
+                                <td>{{$ficha->estado}}</td>
+                                @foreach($programa as $pformacion)
+                                    @if($ficha->idPformacion == $pformacion->Codigo)
+                                        <td>{{$pformacion->PFormacion}}</td>
+                                    @endif
+                                @endforeach
+                                <td>
+                                    @csrf
+                                    <a href="{{route('ficha.edit',$ficha->idFicha)}}">
+                                        <i class="far fa-edit"></i>
+                                    </a>
+                                    <a href=" ">
+                                        <i class="fas fa-ban"></i>
+                                    </a>
+                                </td>
+                            </tr>
                             @endforeach
-                            <td>
-                                @csrf
-                                <a href="{{route('ficha.edit',$ficha->idFicha)}}">
-                                    <i class="far fa-edit"></i>
-                                </a>
-                                <a href=" ">
-                                    <i class="fas fa-ban"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
                 <hr>
             </div>
         </div>

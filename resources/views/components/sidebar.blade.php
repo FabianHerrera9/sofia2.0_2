@@ -4,9 +4,9 @@
     </button>
     <ul class="nav flex-column collapse d-sm-block my-sm-5 " id="side">
         <li class="nav-item my-sm-3">
-            <a href="{{route('ficha.index')}}">
+            <a  href="{{route('ficha.index')}}">
                 <i class="fas fa-award"></i>Fichas
-            </a>
+            </a>            
         </li>
         <li class="nav-item my-sm-3">
             <a href="{{route('programa.index')}}">
