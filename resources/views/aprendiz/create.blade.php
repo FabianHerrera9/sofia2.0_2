@@ -54,7 +54,7 @@
                         </select>
                         <hr>
                         <button type="submit" class="btn btn-success">Agregar Aprendiz</button>
-                        <a type="button" class="btn" id="color-font" href="{{route('instructor.index')}}">Cancelar</a>
+                        <a type="button" class="btn" id="color-font" href="{{route('aprendiz.index')}}">Cancelar</a>
                     </form>
                 </div>
             </div>

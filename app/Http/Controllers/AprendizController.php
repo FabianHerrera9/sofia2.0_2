@@ -6,6 +6,8 @@ use App\Models\PFormacion;
 use Illuminate\Http\Request;
 use App\Models\Aprendiz;
 use App\Models\FIcha;
+use Symfony\Component\Translation\Loader\IcuDatFileLoader;
+use function GuzzleHttp\Promise\all;
 
 class AprendizController extends Controller
 {
@@ -26,10 +28,16 @@ class AprendizController extends Controller
     }
     public function edit($id){
         $aprendiz=Aprendiz::find($id);
-        return view('aprendiz.edit',compact('aprendiz'));
+        $programa=PFormacion::all();
+        $ficha=FIcha::all();
+        return view('aprendiz.edit',compact('aprendiz','programa','ficha'));
     }
     public function update (Request $request,$id){
         $aprendiz=Aprendiz::find($id)->update($request->all());
+        return redirect()->route('aprendiz.index');
+    }
+    public function delete($id){
+        $aprendiz=Aprendiz::find($id)->delete();
         return redirect()->route('aprendiz.index');
     }
 }

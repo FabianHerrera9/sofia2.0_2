@@ -40,6 +40,7 @@ Route::get('aprendiz/create',[AprendizController::class,'create'])->name('aprend
 Route::post('aprendiz',[AprendizController::class,'store'])->name('aprendiz.store');
 Route::get('aprendiz/edit/{id}',[AprendizController::class,'edit'])->name('aprendiz.edit');
 Route::put('aprendiz/{id}', [AprendizController::class,'update'])->name('aprendiz.update');
+Route::delete('aprendiz/{id}',[AprendizController::Class,'delete'])->name('aprendiz.delete');
 
 //Instructores
 Route::get('instructor',[InstructorController::class,'index'])->name('instructor.index');

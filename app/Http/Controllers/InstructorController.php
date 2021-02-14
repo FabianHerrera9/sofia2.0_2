@@ -20,12 +20,12 @@ class InstructorController extends Controller
         return view('instructor.create',compact('ficha','programa'));
     }
     public function store(Request $request ) {
+
         $instructor=Instructor::create($request->all());
         $request->validate([
-
             'file'=>'required|image'
-
         ]);
+        $request->file('file')->store('public/imagen');
         return redirect()->route('instructor.index');
     }
     public function edit($id){

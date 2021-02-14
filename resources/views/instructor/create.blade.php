@@ -10,7 +10,11 @@
                     <form action="{{route('instructor.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-floating mb-3">
-                            <input type="file"  id="Foto" name="Foto" accept="image/*" >
+                            <input type="file" id="Foto" name="Foto" accept="image/*" >
+                            <br>
+                            @error('file')
+                                <small class="text-danger">El archivo deber ser una Imagen</small>
+                            @enderror
                         </div>
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="Nombres" name="Nombres" placeholder="instructor">
