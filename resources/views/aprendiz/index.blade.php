@@ -48,9 +48,11 @@
                                             @csrf
                                             @method('DELETE')
                                             <a href="{{route('aprendiz.edit',$aprendices->id)}}">
-                                                <i class="far fa-edit "></i>
+                                                <i class="far fa-edit"></i>
                                             </a>
-                                                <button type="submit" class="fas fa-ban"></button>
+                                            <button class="btn" type="submit">
+                                                <i class="fas fa-ban"></i>
+                                            </button>
                                         </form>
                                     </td>
                                 </tr>
