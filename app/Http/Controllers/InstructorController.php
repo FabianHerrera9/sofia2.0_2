@@ -26,7 +26,9 @@ class InstructorController extends Controller
     }
     public function edit($id){
         $instructor=Instructor::find($id);
-        return view('instructor.edit',compact('instructor'));
+        $ficha=FIcha::all();
+        $programa=PFormacion::all();
+        return view('instructor.edit',compact('instructor','ficha','programa'));
     }
     public function update (Request $request,$id){
         $instructor=Instructor::find($id)->update($request->all());
