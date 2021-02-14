@@ -15,7 +15,7 @@
     <style type="text/css">
         ul li a{
             color: aliceblue;
-            text-decoration: none; 
+            text-decoration: none;
         }
         i{
             width: 24px;
@@ -26,7 +26,7 @@
             height: 50px;
         }
         #color-font{
-            color: red;
+            color: #ff0000;
         }
         .uppercase{
             text-transform: uppercase;
@@ -42,7 +42,7 @@
             {{-- Este es el cuerpo para trabajar todas las vistas, lo que cambiara en cada una --}}
             <div class="offset-3 offset-xl-2 col-xl-10 col-9 mt-5">
                 @yield('content')
-            </div>          
+            </div>
         </div>
     </div>
     {{-- Script de bootstrap, para usar el menu desplegable --}}
