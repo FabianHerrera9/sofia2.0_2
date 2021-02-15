@@ -30,6 +30,11 @@ class FichaController extends Controller
         $ficha=Ficha::find($id)->update($request->all());
         return redirect()->route('ficha.index');
     }
+    public function indexinact() {
+        $fichas = Ficha::all()->where('estado','==','Inactivo');
+        $programa = PFormacion::all();
+        return view('ficha.index',compact('fichas','programa'));
+    }
 
 
 }
