@@ -24,6 +24,11 @@
                             <input type="number" class="form-control" id="Documento" name="Documento" placeholder="Documento" >
                             <label for="Documento">Documento</label>
                         </div>
+                        <select name="Estado" id="Estado" class="form-select my-3" aria-label="Default select example" >
+                            <option>Seleccione estado del instructor</option>
+                            <option value="Activo">Activo</option>
+                            <option value="Inactivo">Inactivo</option>
+                        </select>
                         <select name="idFicha" id="idFicha" class="form-select" aria-label="select" required>
                             <option value="">Seleccione la Ficha</option>
                                 @foreach($ficha as $fichas)

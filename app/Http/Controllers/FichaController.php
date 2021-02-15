@@ -9,7 +9,7 @@ use App\Models\Ficha;
 class FichaController extends Controller
 {
     public function index() {
-        $fichas = Ficha::all();
+        $fichas = Ficha::all()->where('estado','==','Activo');
         $programa = PFormacion::all();
         return view('ficha.index',compact('fichas','programa'));
     }
@@ -30,5 +30,6 @@ class FichaController extends Controller
         $ficha=Ficha::find($id)->update($request->all());
         return redirect()->route('ficha.index');
     }
+
 
 }

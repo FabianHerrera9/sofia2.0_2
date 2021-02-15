@@ -20,6 +20,7 @@
                                 <th>Nombres</th>
                                 <th>Apellidos</th>
                                 <th>Documento</th>
+                                <th>Estado</th>
                                 <th>Ficha</th>
                                 <th>Opciones</th>
                             </tr>
@@ -31,6 +32,7 @@
                                     <td>{{$instructores->Nombres}}</td>
                                     <td>{{$instructores->Apellidos}}</td>
                                     <td>{{$instructores->Documento}}</td>
+                                    <td>{{$instructores->Estado}}</td>
                                     @foreach($ficha as $fichas)
                                         @if($instructores->idFicha == $fichas->idFicha)
                                             <td>{{$fichas->idFicha}}</td>
@@ -40,7 +42,7 @@
                                         <a href="{{route('instructor.edit',$instructores->id)}}">
                                             <i class="far fa-edit"></i>
                                         </a>
-                                        <a href=" ">
+                                        <a href="">
                                             <i class="fas fa-ban"></i>
                                         </a>
                                     </td>

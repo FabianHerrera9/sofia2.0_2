@@ -9,6 +9,7 @@
             <div class="btn-group d-md-block">
                 <hr>
                 <a href="{{route('ficha.create')}}" class="btn btn-success">Registro Ficha</a>
+
             </div>
             <div class="card-body">
                 <div class="table-responsive">

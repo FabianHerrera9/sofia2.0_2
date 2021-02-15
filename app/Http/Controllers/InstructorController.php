@@ -35,7 +35,4 @@ class InstructorController extends Controller
         $instructor=Instructor::find($id)->update($request->all());
         return redirect()->route('instructor.index');
     }
-    public function desactivar(Request $request, $estado){
-        $instructor=Instructor::where('')
-    }
 }

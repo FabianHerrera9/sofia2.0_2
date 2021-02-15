@@ -25,6 +25,11 @@
                             <input type="number" value="{{$instructor->Documento}}" class="form-control" id="Documento" name="Documento" placeholder="Documento" >
                             <label for="Documento">{{$instructor->Documento}}</label>
                         </div>
+                        <select name="Estado" id="Estado" class="form-select my-3" aria-label="Default select example" >
+                            <option value="{{$instructor->Estado}}">{{$instructor->Estado}}</option>
+                            <option value="Activo">Activo</option>
+                            <option value="Inactivo">Inactivo</option>
+                        </select>
                         <select name="idFicha" id="idFicha" class="form-select" aria-label="select" required>
                             @foreach($ficha as $fichas)
                                 @foreach($programa as $pformacion)
@@ -43,7 +48,7 @@
                             @endforeach
                         </select>
                         <hr>
-                        <button type="submit" class="btn btn-success">Actualizarr</button>
+                        <button type="submit" class="btn btn-success">Actualizar</button>
                         <a type="button" class="btn" id="color-font" href="{{route('instructor.index')}}">Cancelar</a>
                     </form>
                 </div>

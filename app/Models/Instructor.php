@@ -11,6 +11,6 @@ class Instructor extends Model
     protected $table='instructores';
     protected $primaryKey='id';
     protected $fillable = [
-        'Nombres','Apellidos','Documento','Foto','idFicha'
+        'Nombres','Apellidos','Documento','Foto','idFicha','Estado'
     ];
 }
