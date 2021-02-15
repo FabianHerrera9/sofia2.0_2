@@ -5,7 +5,24 @@
 @section('content')
     <div class="container">
         <div class="row">
-                    
+            <div class="card col-lg-3 mb-3">
+                <div class="btn-group flex-column">
+                    <div class="btn-group">
+                        <div>
+                            <div>
+                                <a href="{{route('ficha.index')}}" class="btn btn-primary my-3">Fichas Activas</a>        
+                                <a href="{{route('ficha.inactive')}}" class="btn btn-warning my-3">Fichas Inactivas</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-floating my-3">
+                    <input type="text" class="form-control" id="asd" name="asd" placeholder="instructor" $asd=value>
+                    <label for="Nombres">Buscar caracter</label>
+                    <button class="btn btn-success">Buscar</button>
+                </div>
+            </div>
             <div class="card offset-lg-1 col-lg-8">
                 <div class="btn-group d-md-block">
                     <div class="btn-group">
