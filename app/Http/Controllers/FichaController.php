@@ -49,7 +49,7 @@ class FichaController extends Controller
     public function indexa(Request $request)
     {
         $nombre = $request->get('asd');
-        $programa = PFormacion::where('PFormacion','==',"%$nombre%");        
+        $programa = PFormacion::all()->where('PFormacion','==',"%$nombre%");
         return view('ficha.index', compact('programa'));
     }
 }

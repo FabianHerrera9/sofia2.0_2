@@ -13,4 +13,5 @@ class Ficha extends Model
     protected $fillable = [
         'Jornada','estado','idPformacion'
     ];
+
 }

@@ -10,7 +10,7 @@
                     <div class="btn-group">
                         <div>
                             <div>
-                                <a href="{{route('ficha.index')}}" class="btn btn-primary my-3">Fichas Activas</a>        
+                                <a href="{{route('ficha.index')}}" class="btn btn-primary my-3">Fichas Activas</a>
                                 <a href="{{route('ficha.inactive')}}" class="btn btn-warning my-3">Fichas Inactivas</a>
                             </div>
                         </div>
@@ -18,7 +18,7 @@
                 </div>
                 <form class="form-inline">
                     <div class="form-floating my-3">
-                        <input type="search" aria-label="Search" class="form-control" id="asd" name="asd" placeholder="instructor">
+                        <input name="asd"  class="form-control" type="search" aria-label="Search" placeholder="Buscar caracter">
                         <label for="Nombres">Buscar caracter</label>
                         <button class="btn btn-success" type="submit">Buscar</button>
                     </div>
