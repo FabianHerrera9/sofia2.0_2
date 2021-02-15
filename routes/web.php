@@ -22,6 +22,7 @@ Route::get('/', function () {return view('index');
 
 //Fichas
 Route::get('ficha',[FichaController::class,'index'])->name('ficha.index');
+Route::get('ficha/inactiva',[FichaController::class,'indexinactive'])->name('ficha.inactive');
 Route::get('ficha/create',[FichaController::class,'create'])->name('ficha.create');
 Route::post('ficha',[FichaController::class,'store'])->name('ficha.store');
 Route::get('ficha/edit/{id}',[FichaController::class,'edit'])->name('ficha.edit');
