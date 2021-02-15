@@ -46,4 +46,10 @@ class FichaController extends Controller
         $programa = PFormacion::all();
         return view('ficha.index', compact('fichas', 'programa'));
     }
+    public function indexa(Request $request)
+    {
+        $nombre = $request->get('asd');
+        $programa = PFormacion::where('PFormacion','==',"%$nombre%");        
+        return view('ficha.index', compact('programa'));
+    }
 }

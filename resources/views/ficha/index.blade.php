@@ -14,16 +14,15 @@
                                 <a href="{{route('ficha.inactive')}}" class="btn btn-warning my-3">Fichas Inactivas</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <form class="form-inline">
                     <div class="form-floating my-3">
-                        <input type="search" aria-label="Search" class="form-control" id="asd" name="asd" placeholder="instructor" $asd=value>
+                        <input type="search" aria-label="Search" class="form-control" id="asd" name="asd" placeholder="instructor">
                         <label for="Nombres">Buscar caracter</label>
                         <button class="btn btn-success" type="submit">Buscar</button>
                     </div>
-                </form>                    
+                </form>
             </div>
             <div class="card offset-lg-1 col-lg-8">
                 <div class="btn-group d-md-block">
