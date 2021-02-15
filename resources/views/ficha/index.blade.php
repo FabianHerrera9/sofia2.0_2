@@ -5,18 +5,11 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="card offset-md-2 col-md-8">
+                    
+            <div class="card offset-lg-1 col-lg-8">
                 <div class="btn-group d-md-block">
-                    <hr>
                     <div class="btn-group">
                         <a href="{{route('ficha.create')}}" class="btn btn-success mx-3 my-3">Registro Ficha</a>
-                        <div>
-                            <div>
-                                <a href="{{route('ficha.index')}}" class="btn btn-primary my-3">Fichas Activas</a>
-
-                                <a href="{{route('ficha.inactive')}}" class="btn btn-warning my-3">Fichas Inactivas</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="card-body">
