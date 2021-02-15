@@ -13,12 +13,12 @@ class AprendizController extends Controller
 {
     public function index() {
         $aprendiz = Aprendiz::all();
-        $ficha = Ficha::all();
+        $ficha = Ficha::all()->where('estado', '==', 'Activo');
         $programa=PFormacion::all();
         return view('aprendiz.index',compact('aprendiz','ficha','programa'));
     }
     public function create() {
-        $ficha = Ficha::all();
+        $ficha = Ficha::all()->where('estado', '==', 'Activo');
         $programa = PFormacion::all();
         return view('aprendiz.create',compact('ficha','programa'));
     }
@@ -29,7 +29,7 @@ class AprendizController extends Controller
     public function edit($id){
         $aprendiz=Aprendiz::find($id);
         $programa=PFormacion::all();
-        $ficha=FIcha::all();
+        $ficha = Ficha::all()->where('estado', '==', 'Activo');
         return view('aprendiz.edit',compact('aprendiz','programa','ficha'));
     }
     public function update (Request $request,$id){

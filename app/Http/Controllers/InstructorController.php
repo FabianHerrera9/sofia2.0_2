@@ -12,11 +12,11 @@ class InstructorController extends Controller
 {
     public function index() {
         $instructor = Instructor::all();
-        $ficha = Ficha::all();
+        $ficha = Ficha::all()->where('estado', '==', 'Activo');
         return view('instructor.index',compact('instructor','ficha'));
     }
     public function create() {
-        $ficha = Ficha::all();
+        $ficha = Ficha::all()->where('estado', '==', 'Activo');
         $programa=PFormacion::all();
         return view('instructor.create',compact('ficha','programa'));
     }
@@ -27,7 +27,7 @@ class InstructorController extends Controller
     }
     public function edit($id){
         $instructor=Instructor::find($id);
-        $ficha=FIcha::all();
+        $ficha = Ficha::all()->where('estado', '==', 'Activo');
         $programa=PFormacion::all();
         return view('instructor.edit',compact('instructor','ficha','programa'));
     }
