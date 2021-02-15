@@ -5,15 +5,21 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="card offset-md-2 col-md-8">
-            <div class="btn-group d-md-block">
+        <div class="card col-lg-3 mb-3">
+            <div class="form-floating my-3">
+                <input type="text" class="form-control" id="Nombres" name="Nombres" placeholder="instructor">
+                <label for="Nombres">Buscar caracter</label>
+                <button class="btn btn-success">Buscar</button>
+            </div>
+        </div>
+        <div class="card offset-lg-1 col-lg-8">
+            <div class="btn-group d-lg-block">
                 <hr>
                 <a href="{{route('ficha.create')}}" class="btn btn-success">Registro Ficha</a>
-
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table  table-hover">
+                    <table class="table table-hover">
                         <caption>Lista de fichas</caption>
                         <thead>
                             <tr class="table-dark">
