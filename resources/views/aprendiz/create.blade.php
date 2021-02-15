@@ -14,7 +14,8 @@
                             <label for="Nombre">Nombre(s)</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="Apellidos" name="Apellidos" placeholder="Apellidos" >
+                            <input type="text" class="form-control" id="Apellidos" name="Apellidos"
+                                   placeholder="Apellidos">
                             <label for="Apellidos">Apellidos</label>
                         </div>
                         <div class="form-floating mb-3">
@@ -22,10 +23,12 @@
                             <label for="Correo">Correo electronico</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="date" class="form-control" id="FechaNacimiento" name="FechaNacimiento" placeholder="Fecha de Nacimiento">
+                            <input type="date" class="form-control" id="FechaNacimiento" name="FechaNacimiento"
+                                   placeholder="Fecha de Nacimiento">
                             <label for="FechaNacimiento">Fecha de nacimiento</label>
                         </div>
-                        <select name="TipoDocumento" id="TipoDocumento" class="form-select my-3" aria-label="selecionar tipo de documento" >
+                        <select name="TipoDocumento" id="TipoDocumento" class="form-select my-3"
+                                aria-label="selecionar tipo de documento">
                             <option>Seleccione tipo de documento</option>
                             <option value="TI">TI</option>
                             <option value="CC">CC</option>
@@ -33,10 +36,11 @@
                             <option value="PS">PS</option>
                         </select>
                         <div class="form-floating mb-3">
-                            <input type="number" class="form-control" id="Documento" name="Documento" placeholder="Documento" >
+                            <input type="number" class="form-control" id="Documento" name="Documento"
+                                   placeholder="Documento">
                             <label for="Documento">Documento</label>
                         </div>
-                        <select name="Genero" id="Genero" class="form-select my-3" aria-label="selecionar genero" >
+                        <select name="Genero" id="Genero" class="form-select my-3" aria-label="selecionar genero">
                             <option>Seleccione el genero</option>
                             <option value="Masculino">Masculino</option>
                             <option value="Femenino">Femenino</option>
@@ -44,13 +48,15 @@
                         </select>
                         <select name="idFicha" id="idFicha" class="form-select" aria-label="select">
                             <option value="">Seleccione la Ficha</option>
-                                @foreach($ficha as $fichas)
-                                    @foreach($programa as $pformacion)
-                                        @if($fichas->idFicha == $pformacion->Codigo)
-                                        <option value="{{$fichas->idFicha}}"> {{$fichas->idFicha}} | {{$pformacion->PFormacion}} | {{$fichas->estado}}</option>
-                                        @endif
-                                    @endforeach
+                            @foreach($ficha as $fichas)
+                                @foreach($programa as $pformacion)
+                                    @if($fichas->idFicha == $pformacion->Codigo)
+                                        <option value="{{$fichas->idFicha}}"> {{$fichas->idFicha}}
+                                            | {{$pformacion->PFormacion}} | {{$fichas->estado}}
+                                            | {{$fichas->Jornada}}</option>
+                                    @endif
                                 @endforeach
+                            @endforeach
                         </select>
                         <hr>
                         <button type="submit" class="btn btn-success">Agregar Aprendiz</button>

@@ -35,11 +35,18 @@
                                     <td>{{$aprendices->FechaNacimiento}}</td>
                                     <td>{{$aprendices->TipoDocumento}} {{$aprendices->Documento}}</td>
                                     <td>{{$aprendices->Genero}}</td>
+
                                     @if($aprendices->idFicha == "")
                                         <td>Sin asignar</td>
                                     @endif
+
                                     @foreach($ficha as $fichas)
-                                        @if($aprendices->idFicha == $fichas->idFicha)
+
+                                        @if($fichas->estado == "Inactivo")
+
+                                            <td>Sin asignar</td>
+
+                                        @elseif($aprendices->idFicha == $fichas->idFicha)
                                             <td>{{$fichas->idFicha}}</td>
                                         @endif
                                     @endforeach
