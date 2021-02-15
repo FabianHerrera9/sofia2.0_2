@@ -17,11 +17,13 @@
 
                     </div>
                 </div>
-                <div class="form-floating my-3">
-                    <input type="text" class="form-control" id="asd" name="asd" placeholder="instructor" $asd=value>
-                    <label for="Nombres">Buscar caracter</label>
-                    <button class="btn btn-success">Buscar</button>
-                </div>
+                <form class="form-inline">
+                    <div class="form-floating my-3">
+                        <input type="search" aria-label="Search" class="form-control" id="asd" name="asd" placeholder="instructor" $asd=value>
+                        <label for="Nombres">Buscar caracter</label>
+                        <button class="btn btn-success" type="submit">Buscar</button>
+                    </div>
+                </form>                    
             </div>
             <div class="card offset-lg-1 col-lg-8">
                 <div class="btn-group d-md-block">
