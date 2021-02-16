@@ -8,11 +8,13 @@ use App\Models\Ficha;
 
 class FichaController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $fichas = Ficha::all()->where('estado', '==', 'Activo');
         $programa = PFormacion::all();
-        return view('ficha.index', compact('fichas', 'programa'));
+        $Buscar = $request->get('Buscar');
+        $programaa = PFormacion::all()->where('PFormacion','==',"%$Buscar%");
+        return view('ficha.index', compact('fichas', 'programa','Buscar','programaa'));
     }
 
     public function create()
@@ -46,10 +48,10 @@ class FichaController extends Controller
         $programa = PFormacion::all();
         return view('ficha.index', compact('fichas', 'programa'));
     }
+
     public function indexa(Request $request)
     {
-        $nombre = $request->get('asd');
-        $programa = PFormacion::all()->where('PFormacion','==',"%$nombre%");
+
         return view('ficha.index', compact('programa'));
     }
 }

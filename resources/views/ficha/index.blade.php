@@ -16,10 +16,11 @@
                         </div>
                     </div>
                 </div>
-                <form class="form-inline">
+                <form class="form-inline" action="{{route('ficha.index')}}" method="get">
                     <div class="form-floating my-3">
-                        <input name="asd"  class="form-control" type="search" aria-label="Search" placeholder="Buscar caracter">
-                        <label for="Nombres">Buscar caracter</label>
+                        <input name="Buscar" id="Buscar" value="{{$Buscar}}" class="form-control" type="text"
+                               placeholder="Buscar ">
+                        <label for="Buscar">Buscar caracter</label>
                         <button class="btn btn-success" type="submit">Buscar</button>
                     </div>
                 </form>
