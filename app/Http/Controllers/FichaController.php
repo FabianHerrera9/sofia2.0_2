@@ -42,11 +42,12 @@ class FichaController extends Controller
         return redirect()->route('ficha.index');
     }
 
-    public function indexinactive()
+    public function indexinactive(Request $request)
     {
         $fichas = Ficha::all()->where('estado', '==', 'Inactivo');
         $programa = PFormacion::all();
-        return view('ficha.index', compact('fichas', 'programa'));
+        $Buscar = $request->get('Buscar');
+        return view('ficha.index', compact('fichas', 'programa','Buscar'));
     }
 
     public function indexa(Request $request)
