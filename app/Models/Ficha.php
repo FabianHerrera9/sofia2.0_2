@@ -14,4 +14,8 @@ class Ficha extends Model
         'Jornada','estado','idPformacion'
     ];
 
+    public function fichas(){
+        return $this -> hasMany(Ficha::class);
+    }
+
 }

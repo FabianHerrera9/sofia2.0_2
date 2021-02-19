@@ -50,9 +50,4 @@ class FichaController extends Controller
         return view('ficha.index', compact('fichas', 'programa'));
     }
 
-    public function indexa(Request $request)
-    {
-
-        return view('ficha.index', compact('programa'));
-    }
 }

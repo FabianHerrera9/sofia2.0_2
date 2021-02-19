@@ -13,4 +13,8 @@ class PFormacion extends Model
     protected $fillable = [
         'PFormacion','SIGLA'
     ];
+
+    public function programasdeformacion(){
+        return $this->hasMany(PFormacion::class);
+    }
 }
