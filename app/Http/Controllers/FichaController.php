@@ -10,12 +10,12 @@ class FichaController extends Controller
 {
     public function index(Request $request)
     {
-        $Buscar = trim($request->get('Buscar'));
-        $fichas = Ficha::all()->where('estado', '==', 'Activo');
-        $programa = PFormacion::select()
-        ->where('PFormacion','LIKE','%'.$Buscar.'%')
-        ->get();       
-        return view('ficha.index', compact('fichas','Buscar','programa'));
+        $Buscar = $request->get('Buscar');
+        $fichas = PFormacion::join('fichas','fichas.idPformacion','=','programasdeformacion.codigo')
+        ->select('*')
+        ->where('programasdeformacion.PFormacion','LIKE','%'.$Buscar.'%')
+        ->get();    
+        return view('ficha.index', compact('fichas','Buscar',));
     }
 
     public function create()

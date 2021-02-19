@@ -50,11 +50,7 @@
                                             <td>{{$ficha->idFicha}}</td>
                                             <td>{{$ficha->Jornada}}</td>
                                             <td>{{$ficha->estado}}</td>
-                                            @foreach($programa as $pformacion)
-                                                @if($ficha->idPformacion == $pformacion->Codigo)
-                                                    <td>{{$pformacion->PFormacion}}</td>
-                                                @endif
-                                            @endforeach
+                                            <td>{{$ficha->PFormacion}}</td>
                                             <td>
                                                 @csrf
                                                 <a href="{{route('ficha.edit',$ficha->idFicha)}}">
