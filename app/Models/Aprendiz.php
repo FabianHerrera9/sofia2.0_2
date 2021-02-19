@@ -12,6 +12,18 @@ class Aprendiz extends Model
     protected $table='aprendices';
     protected $primaryKey='id';
     protected $fillable = [
-        'Documento','Nombre','Apellidos','Correo','FechaNacimiento','Genero','TipoDocumento','idFicha'
+        'Documento',
+        'Nombre',
+        'Apellidos'
+        ,'Correo'
+        ,'FechaNacimiento'
+        ,'Genero'
+        ,'TipoDocumento'
+        ,'idFicha'
     ];
+
+    public function aprendices(){
+        return $this->hasMany(Aprendiz::class);
+    }
+
 }

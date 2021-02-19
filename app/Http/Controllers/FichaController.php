@@ -11,11 +11,17 @@ class FichaController extends Controller
     public function index(Request $request)
     {
         $Buscar = trim($request->get('Buscar'));
-        $fichas = Ficha::all()->where('estado', '==', 'Activo');
+        $inner = PFormacion::join('fichas', 'programasdeformacion.Codigo', '=', 'fichas.idPformacion')
+            ->select('*')
+            //->where('fichas.estado', '=', "Activo")
+            ->get();
         $programa = PFormacion::select()
-        ->where('PFormacion','LIKE','%'.$Buscar.'%')
-        ->get();
-        return view('ficha.index', compact('fichas','Buscar','programa'));
+            ->where('PFormacion', 'LIKE', '%' . $Buscar . '%')
+            ->get();
+        $fichas = Ficha::select()
+            ->where('Jornada', 'LIKE', '%' . $Buscar . '%')
+            ->get();
+        return view('ficha.index', compact('inner', 'Buscar', 'programa','fichas'));
     }
 
     public function create()
@@ -50,9 +56,4 @@ class FichaController extends Controller
         return view('ficha.index', compact('fichas', 'programa'));
     }
 
-    public function indexa(Request $request)
-    {
-
-        return view('ficha.index', compact('programa'));
-    }
 }
