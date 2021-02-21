@@ -6,10 +6,10 @@
     <div class="container">
             <form class="form-inline" action="{{route('ficha.index')}}" method="get">
                 <div class="form-floating my-3">
-                    <input name="Buscar" id="Buscar" value="{{$Buscar}}" class="form-control" type="text"placeholder="Buscar">                            
+                    <input name="Buscar" id="Buscar" value="{{$Buscar}}" class="form-control" type="text"placeholder="Buscar">
                     <label for="Buscar">Buscar caracter</label>
                     <button class="btn btn-success w-100" type="submit">Buscar</button>
-                </div>               
+                </div>
             </form>
             <div class="mx-5 px-5">
                 <div class="btn-group flex-column w-100 offset-lg-4 col-lg-4 px-5">
@@ -44,7 +44,7 @@
                                 <th>Programa de formación</th>
                                 <th>Opciones</th>
                             </tr>
-                            </thead>
+                              </thead>
                             <tbody>
                                     @foreach($fichas as $ficha)
                                         <tr>
@@ -52,13 +52,13 @@
                                             <td>{{$ficha->Jornada}}</td>
                                             <td>{{$ficha->estado}}</td>
                                             @if($Buscar != '')
-                                                <td>{{$ficha->PFormacion}}</td>     
+                                                <td>{{$ficha->PFormacion}}</td>
                                             @else
                                                 @foreach($programa as $program)
                                                     @if($ficha->idPformacion == $program->Codigo)
                                                         <td>{{$program->PFormacion}}</td>
                                                     @endif
-                                                @endforeach                                       
+                                                @endforeach
                                             @endif
                                             <td>
                                                 @csrf
