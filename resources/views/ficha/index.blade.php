@@ -17,7 +17,7 @@
                     <div class="btn-group">
                         <div>
                             <div>
-                                <a href="{{route('ficha.activa')}}" class="btn my-3 btn-outline-success">Fichas Activas</a>
+                                <a href="{{route('ficha.index')}}" class="btn my-3 btn-outline-success">Fichas Activas</a>
                                 <a href="{{route('ficha.inactive')}}" class="btn btn-outline-danger my-3">Fichas Inactivas</a>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
                             </tr>
                               </thead>
                             <tbody>
-                                    @foreach($fichas as $ficha)
+                                    @foreach($activas as $ficha)
                                         <tr>
                                             <td>{{$ficha->idFicha}}</td>
                                             <td>{{$ficha->Jornada}}</td>

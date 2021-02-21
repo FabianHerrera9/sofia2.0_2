@@ -18,7 +18,7 @@ class CreateInstructoresTable extends Migration
             $table->string('Nombres',75);
             $table->string('Apellidos',75);
             $table->string('Documento',75);
-            $table->string('Foto');
+            $table->string('Foto',50);
             $table->enum('Estado',['Activo','Inactivo']);
 
             $table->bigInteger('idFicha')->unsigned();
