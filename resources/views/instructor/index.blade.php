@@ -42,9 +42,6 @@
                                         <a href="{{route('instructor.edit',$instructores->id)}}">
                                             <i class="far fa-edit"></i>
                                         </a>
-                                        <a href="">
-                                            <i class="fas fa-ban"></i>
-                                        </a>
                                     </td>
                                 </tr>
                             @endforeach
