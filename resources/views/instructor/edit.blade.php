@@ -33,7 +33,7 @@
                         <select name="idFicha" id="idFicha" class="form-select" aria-label="select" required>
                             @foreach($ficha as $fichas)
                                 @foreach($programa as $pformacion)
-                                    @if($fichas->idFicha == $pformacion->Codigo)
+                                    @if($fichas->idFicha == $pformacion->Codigo & $instructor->idFicha == $fichas->idFicha)
                                         <option value="{{$fichas->idFicha}}">{{$fichas->idFicha}} | {{$pformacion->PFormacion}}</option>
                                     @endif
                                 @endforeach
