@@ -13,9 +13,9 @@ class FichaController extends Controller
         $Buscar = $request->get('Buscar');
         $programa = PFormacion::all();
         $fichas = PFormacion::join('fichas','fichas.idPformacion','=','programasdeformacion.codigo')
-            ->select('*')
-            ->where('programasdeformacion.PFormacion','LIKE','%'.$Buscar.'%')
-            ->get();
+        ->select('*')
+        ->where('programasdeformacion.PFormacion','LIKE','%'.$Buscar.'%')
+        ->get();
         $activas=Ficha::all()->where('estado','==','Activo');
         return view('ficha.index', compact('fichas','Buscar','programa','activas'));
     }
@@ -23,7 +23,7 @@ class FichaController extends Controller
     public function indexinactive(Request $request)
     {
         $Buscar = $request->get('Buscar');
-        $fichas = Ficha::all()->where('estado', '==', 'Inactivo');
+        $fichas = Ficha::all()->where('estado', '=', 'Inactivo');
         $programa = PFormacion::all();
         return view('ficha.index', compact('fichas', 'Buscar','programa'));
     }
@@ -31,7 +31,7 @@ class FichaController extends Controller
     public function indexactiva(Request $request)
     {
         $Buscar = $request->get('Buscar');
-        $fichas = Ficha::all()->where('estado', '=x=', 'Activo');
+        $fichas = Ficha::all()->where('estado', '=', 'Activo');
         $programa = PFormacion::all();
         return view('ficha.index', compact('fichas', 'Buscar','programa'));
     }
@@ -60,6 +60,5 @@ class FichaController extends Controller
         $ficha = Ficha::find($id)->update($request->all());
         return redirect()->route('ficha.index');
     }
-
-
 }
+    
