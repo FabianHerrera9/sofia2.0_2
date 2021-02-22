@@ -39,6 +39,7 @@
                             @endforeach
                             </tbody>
                         </table>
+                        {{$programa->links()}}
                     </div>
                     <hr>
                 </div>

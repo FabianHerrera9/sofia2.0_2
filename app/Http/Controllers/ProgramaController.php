@@ -8,7 +8,7 @@ use App\Models\PFormacion;
 class ProgramaController extends Controller
 {
     public function index() {
-        $programa = PFormacion::all();
+        $programa = PFormacion::paginate('5');
         return view('programa.index',compact('programa'));
     }
     public function create() {
